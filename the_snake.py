@@ -24,8 +24,7 @@ BORDER_COLOR = (93, 216, 228)
 APPLE_COLOR = (255, 0, 0)
 
 # Цвет змейки
-# SNAKE_COLOR = (0, 255, 0)  # зеленый
-SNAKE_COLOR = (255, 0, 255)  # пурпурный
+SNAKE_COLOR = (255, 0, 255)
 
 # Скорость движения змейки:
 SPEED = 10
@@ -84,7 +83,7 @@ class Snake(GameObject):
         self.next_direction = next_direction
         self.length = 1
         self.positions = [self.position]
-        self.last = None  # Конец
+        self.last = None
 
     def update_direction(self):
         """Обновляет направление движения змейки"""
@@ -94,7 +93,7 @@ class Snake(GameObject):
 
     def move(self):
         """Обновляет позицию змейки"""
-        self.last = self.positions[-1]  # Сохраняем конец
+        self.last = self.positions[-1]
         new_head_position_x = (self.positions[0][0]
                                + self.direction[0] * GRID_SIZE) % SCREEN_WIDTH
         new_head_position_y = (self.positions[0][1]
