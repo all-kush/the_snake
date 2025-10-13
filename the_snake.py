@@ -155,7 +155,6 @@ def main():
 
     while True:
         clock.tick(SPEED)
-        apple.draw()
         handle_keys(snake)
         snake.update_direction()
         snake.move()
