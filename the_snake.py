@@ -1,4 +1,4 @@
-from random import randrange
+from random import randrange  # choice, randint
 
 import pygame
 
@@ -165,6 +165,7 @@ def main():
             snake.length += 1
             apple.snake_positions = snake.positions
             apple.position = apple.randomize_position()
+        # if snake.positions.count(snake.get_head_position()) > 1:
         if snake.get_head_position() in snake.positions[1:]:
             snake.reset()
             apple.snake_positions = snake.positions
